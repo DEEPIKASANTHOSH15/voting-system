@@ -1,0 +1,30 @@
+def voting_system():
+    votes = {"Option 1": 0, "Option 2": 0, "Option 3": 0}
+    
+    while True:
+        print("\n--- Voting System ---")
+        print("1. Vote for Option 1")
+        print("2. Vote for Option 2")
+        print("3. Vote for Option 3")
+        print("4. Show Results")
+        print("5. Exit")
+        
+        choice = input("Enter your choice: ")
+        
+        if choice == '1':
+            votes["Option 1"] += 1
+        elif choice == '2':
+            votes["Option 2"] += 1
+        elif choice == '3':
+            votes["Option 3"] += 1
+        elif choice == '4':
+            print("\n--- Results ---")
+            for option, count in votes.items():
+                print(f"{option}: {count} votes")
+        elif choice == '5':
+            break
+        else:
+            print("Invalid choice.")
+
+if __name__ == "__main__":
+    voting_system()
